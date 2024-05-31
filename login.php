@@ -1,3 +1,5 @@
+<?php $msg = (isset($_GET['msg']) ? $_GET['msg']: ""); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,5 +19,6 @@
         <button type="submit" name="action" value="login">Login</button>
         <h4>Don't have an account? <a href="register.php">Register</a></h4>
     </form>
+    <?= (!empty($msg) ? "<h2>Error: $msg</h2>" : "") ?>
 </body>
 </html>

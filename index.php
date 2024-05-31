@@ -16,6 +16,8 @@ if (empty($username)) {
     <title>Home</title>
 </head>
 <body>
-    
+    <form action="control.php" method="post">
+        <button type="submit" name="action" value="logout">Log Out</button>
+    </form>
 </body>
 </html>

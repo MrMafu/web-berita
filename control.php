@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "Error: " . mysqli_error($conn);
             }
         } else {
-            echo "Username and Password cannot be empty";
+            header('Location: login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
         }
     }
 
@@ -40,20 +40,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header("Location: index.php");
                     exit;
                 } else {
-                    echo "Invalid username or password";
+                    header('Location: login.php?msg=Username%20atau%20Password%20salah');
                 }
             } else {
-                echo "Invalid username or password";
+                header('Location: login.php?msg=Username%20atau%20Password%20salah');
             }
         } else {
-            echo "Username and Password cannot be empty";
+            header('Location: login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
         }
     }
 
     if ($action == 'logout') {
         session_unset();
         session_destroy();
-        header("Location: index.php");
+        header("Location: welcome.php");
         exit;
     }
 }

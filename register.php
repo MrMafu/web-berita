@@ -1,3 +1,5 @@
+<?php $msg = (isset($_GET['msg']) ? $_GET['msg']: ""); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
