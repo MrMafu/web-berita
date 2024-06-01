@@ -2,7 +2,6 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,6 +9,12 @@
 
 body {
     background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
 }
 
 h1 {
@@ -33,7 +38,7 @@ button {
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 10px 0;
     transition: background-color 0.3s;
 }
 
@@ -47,35 +52,27 @@ input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1DA1F2;
+    outline: none;
 }
 
 .field {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     margin: 20px auto;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
-.btn-horizontal {
-    width: 150px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1DA1F2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn-horizontal:hover {
-    background-color: #0d8ae6;
+.field:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
