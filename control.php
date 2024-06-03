@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($action == 'logout') {
         session_unset();
         session_destroy();
-        header("Location: welcome.php");
+        header("Location: index.php");
         exit;
     }
 }

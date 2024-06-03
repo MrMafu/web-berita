@@ -1,9 +1,10 @@
 <?php
 session_start();
 include 'db.php';
-
-$sql = "SELECT * FROM news ORDER BY date_created DESC";
+$id = $_GET['id'];
+$sql = "SELECT * FROM news WHERE id=$id";
 $result = $conn->query($sql);
+$row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title><?php echo htmlspecialchars($row['title']); ?></title>
     <link rel="stylesheet" href="CSS/berita.css">
 </head>
 <body>
@@ -33,23 +34,15 @@ $result = $conn->query($sql);
     </div>
 
     <div class="container">
-        <?php while($row = $result->fetch_assoc()): ?>
-            <div class="news-item">
-                <h2><?php echo htmlspecialchars($row['title']); ?></h2>
-                <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="News Image">
-                <p>By <?php echo htmlspecialchars($row['author']); ?> on <?php echo htmlspecialchars($row['date_created']); ?></p>
-                <p><?php echo htmlspecialchars($row['description']); ?></p>
-                <a href="news_detail.php?id=<?php echo $row['id']; ?>">Read more</a>
-                <?php if (isset($_SESSION['username']) && $_SESSION['username'] === $row['author']): ?>
-                    <div class="news-actions">
-                        <a href="news_edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        <a href="news_delete.php?id=<?php echo $row['id']; ?>">Delete</a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
+        <div class="news-detail">
+            <h2><?php echo htmlspecialchars($row['title']); ?></h2>
+            <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="News Image">
+            <p>By <?php echo htmlspecialchars($row['author']); ?> on <?php echo htmlspecialchars($row['date_created']); ?></p>
+            <p><?php echo nl2br(htmlspecialchars($row['description'])); ?></p>
+            <a href="index.php" class="back-link">Back to Home</a>
+        </div>
     </div>
-    
+
     <div class="footer">
         <p>&copy; Tugas Berita Kinan Radiaputra</p>
     </div>
