@@ -15,12 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
             if (mysqli_query($conn, $query)) {
-                header("Location: welcome.php");
+                header("Location: ../auth/login.php");
             } else {
                 echo "Error: " . mysqli_error($conn);
             }
         } else {
-            header('Location: login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
+            header('Location: ../auth/login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
         }
     }
 
@@ -37,23 +37,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $row = mysqli_fetch_assoc($result);
                 if ($password == $row['password']) {
                     $_SESSION['username'] = $username;
-                    header("Location: index.php");
+                    header("Location: ../index.php");
                     exit;
                 } else {
-                    header('Location: login.php?msg=Username%20atau%20Password%20salah');
+                    header('Location: ../auth/login.php?msg=Username%20atau%20Password%20salah');
                 }
             } else {
-                header('Location: login.php?msg=Username%20atau%20Password%20salah');
+                header('Location: ../auth/login.php?msg=Username%20atau%20Password%20salah');
             }
         } else {
-            header('Location: login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
+            header('Location: ../auth/login.php?msg=Username%20atau%20Password%20tidak%20bisa%20kosong');
         }
     }
 
     if ($action == 'logout') {
         session_unset();
         session_destroy();
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     }
 }

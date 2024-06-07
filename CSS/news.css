@@ -15,7 +15,7 @@ body {
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    margin: 10px 5px; /* Adjust margin to ensure space between buttons */
+    margin: 10px 5px;
     transition: background-color 0.3s;
 }
 
@@ -28,6 +28,41 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.news-title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news-kinan {
+    max-width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news-desc {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news-img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .header, .footer {
@@ -45,7 +80,7 @@ body {
 
 .nav {
     float: right;
-    display: flex; /* Use flexbox to align items horizontally */
+    display: flex;
     align-items: center;
 }
 
@@ -57,6 +92,17 @@ body {
 
 .nav a:hover {
     color: #0d8ae6;
+}
+
+.news-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-actions-buttons {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .news-item {
@@ -85,23 +131,24 @@ body {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
-    color: white;
-    background: #1DA1F2;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
-.news-item a:hover {
-    background: #0d8ae6;
+.news-read-btn {
+    color: white;
+    background: blue;
 }
 
-.news-actions {
-    margin-top: 10px;
+.news-edit-btn {
+    color: white;
+    background: yellow;
 }
 
-.news-actions a {
-    margin-right: 10px;
+.news-delete-btn {
+    color: white;
+    background: red;
 }
 
 .news-detail {

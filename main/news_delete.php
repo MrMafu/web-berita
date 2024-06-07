@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'db.php';
+include '../controller/db.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location: welcome.php");
+    header("Location: ../auth/welcome.php");
     exit();
 }
 
@@ -19,7 +19,7 @@ if ($_SESSION['username'] !== $row['author']) {
 
 $sql = "DELETE FROM news WHERE id=$id";
 if ($conn->query($sql) === TRUE) {
-    header("Location: index.php");
+    header("Location: ../index.php");
 } else {
     echo "Error deleting news: " . $conn->error;
 }

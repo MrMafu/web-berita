@@ -46,7 +46,8 @@ button:hover {
     background-color: #0d8ae6;
 }
 
-input {
+input,
+textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
@@ -55,7 +56,8 @@ input {
     transition: border-color 0.3s;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     border-color: #1DA1F2;
     outline: none;
 }
