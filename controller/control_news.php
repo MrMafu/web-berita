@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$title = $_POST['title'];
+$title = $conn->real_escape_string($_POST['title']);
 $image = $_FILES['image']['name'];
 $description = $conn->real_escape_string($_POST['description']);
 $author = $_SESSION['username'];

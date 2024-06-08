@@ -47,9 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit News</title>
     <link rel="stylesheet" href="../CSS/auth.css">
+    <script src="https://kit.fontawesome.com/90c067ab0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h2>Edit News</h2>
+    <a href="../index.php"><button><i class="fa-solid fa-chevron-left"></i></button></a>
     <form class="field" action="" method="post" enctype="multipart/form-data">
         <label for="title">Title</label>
         <input type="text" name="title" value="<?php echo $row['title']; ?>" required><br>

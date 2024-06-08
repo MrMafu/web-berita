@@ -43,7 +43,7 @@ body {
     white-space: nowrap;
 }
 
-.news-kinan {
+.news-sub {
     max-width: 95%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,7 +65,13 @@ body {
     border-radius: 5px;
 }
 
-.header, .footer {
+.header {
+    background: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer {
     background: white;
     padding: 10px 0;
     text-align: center;
@@ -105,6 +111,10 @@ body {
     gap: 0.5rem;
 }
 
+.news-actions-buttons button {
+    
+}
+
 .news-item {
     background: #fff;
     margin: 20px 0;
@@ -113,7 +123,7 @@ body {
     border-radius: 5px;
 }
 
-.news-item h2 {
+.news-item h4 {
     margin: 0 0 10px;
 }
 
@@ -127,7 +137,10 @@ body {
     margin: 10px 0;
 }
 
-.news-item a {
+.news-item a,
+.news-item button {
+    border: none;
+    cursor: pointer;
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
@@ -138,17 +151,17 @@ body {
 
 .news-read-btn {
     color: white;
-    background: blue;
+    background: #1DA1F2;
 }
 
 .news-edit-btn {
     color: white;
-    background: yellow;
+    background: #9DDE8B;
 }
 
 .news-delete-btn {
     color: white;
-    background: red;
+    background: #FF204E;
 }
 
 .news-detail {
