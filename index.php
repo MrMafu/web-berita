@@ -22,9 +22,9 @@ $result = $conn->query($sql);
             <h1><i class="fa-solid fa-newspaper"></i> News</h1>
             <div class="nav">
                 <?php if (isset($_SESSION['username'])) : ?>
-                    <a href="main/news_upload.php"><button>Create News ‎ <i class="fa-solid fa-plus"></i></button></a>
+                    <a href="main/news_upload.php"><button>Create News ‎<i class="fa-solid fa-plus"></i></button></a>
                     <form action="controller/control.php" method="post">
-                        <button class="log" type="submit" name="action" value="logout">Log Out</button>
+                        <button class="log" type="submit" name="action" value="logout">Log Out ‎<i class="fa-solid fa-right-from-bracket"></i></button>
                     </form>
                 <?php else : ?>
                     <a href="auth/login.php"><button>Login</button></a>

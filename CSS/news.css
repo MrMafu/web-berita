@@ -7,11 +7,17 @@ body {
     background-color: #f4f4f4;
 }
 
-.log,
+.log {
+    background-color: #FF204E;
+}
+
 .nav a button {
+    background-color: #1DA1F2;
+}
+
+.log, .nav a button {
     border: none;
     border-radius: 5px;
-    background-color: #1DA1F2;
     color: white;
     cursor: pointer;
     padding: 10px 20px;
@@ -19,8 +25,7 @@ body {
     transition: background-color 0.3s;
 }
 
-.log:hover,
-.nav a button:hover {
+.log:hover, .nav a button:hover {
     background-color: #0d8ae6;
 }
 
@@ -36,21 +41,7 @@ body {
     gap: 1rem;
 }
 
-.news-title {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.news-sub {
-    max-width: 95%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.news-desc {
+.news-title, .news-sub, .news-desc {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,13 +56,7 @@ body {
     border-radius: 5px;
 }
 
-.header {
-    background: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.footer {
+.header, .footer {
     background: white;
     padding: 10px 0;
     text-align: center;
@@ -80,7 +65,6 @@ body {
 .header h1 {
     float: left;
     margin: 0;
-    padding: 0;
     display: inline;
 }
 
@@ -111,11 +95,7 @@ body {
     gap: 0.5rem;
 }
 
-.news-actions-buttons button {
-    
-}
-
-.news-item {
+.news-item, .news-detail {
     background: #fff;
     margin: 20px 0;
     padding: 20px;
@@ -123,22 +103,21 @@ body {
     border-radius: 5px;
 }
 
-.news-item h4 {
+.news-item h4, .news-detail h2 {
     margin: 0 0 10px;
 }
 
-.news-item img {
+.news-item img, .news-detail img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.news-item p {
+.news-item p, .news-detail p {
     margin: 10px 0;
 }
 
-.news-item a,
-.news-item button {
+.news-item a, .news-item button, .back-link {
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -164,28 +143,6 @@ body {
     background: #FF204E;
 }
 
-.news-detail {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.news-detail h2 {
-    margin: 0 0 10px;
-}
-
-.news-detail img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.news-detail p {
-    margin: 10px 0;
-}
-
 .back-link {
     display: inline-block;
     margin-top: 20px;
@@ -193,7 +150,6 @@ body {
     color: #1DA1F2;
     padding: 10px 20px;
     border: 1px solid #1DA1F2;
-    border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 

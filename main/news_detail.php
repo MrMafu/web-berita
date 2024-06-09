@@ -14,12 +14,13 @@ $row = $result->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($row['title']); ?></title>
     <link rel="stylesheet" href="../CSS/news.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/90c067ab0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
         <div class="container">
-            <h1>News</h1>
+            <h1><i class="fa-solid fa-newspaper"></i> News</h1>
             <div class="nav">
                 <a href="news_upload.php"><button>Create News</button></a>
                 <?php if (isset($_SESSION['username'])): ?>

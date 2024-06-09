@@ -1,20 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-* {
+body {
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
 }
 
 h1 {
@@ -46,8 +36,7 @@ button:hover {
     background-color: #0d8ae6;
 }
 
-input,
-textarea {
+input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
@@ -56,8 +45,7 @@ textarea {
     transition: border-color 0.3s;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border-color: #1DA1F2;
     outline: none;
 }
