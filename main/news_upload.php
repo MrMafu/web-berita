@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
 <body class="bg-gray-200 m-0 p-0 flex items-center justify-center h-screen">
     <div class="w-full max-w-5xl mx-auto bg-white p-7.5 rounded-lg shadow transition-shadow duration-300 hover:shadow-lg p-5">
         <div class="flex justify-center items-center mb-5 space-x-2">
-            <a href="../index.php">
+            <a href="dashboard.php">
                 <button class="text-[#1DA1F2] text-2xl cursor-pointer">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
