@@ -42,7 +42,7 @@ $result = $stmt->get_result();
             </a>
             <div class="flex items-center space-x-1 text-xs md:text-sm">
                 <?php if (isset($_SESSION['username'])) : ?>
-                    <a href="dashboard.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
+                    <a href="profile.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
                         <i class="fa-solid fa-clipboard-user"></i> ‎ Profile
                     </a>
 
@@ -69,7 +69,7 @@ $result = $stmt->get_result();
         </div>
         <div class="overflow-x-auto">
 
-            <!-- Dashboard Table -->
+            <!-- Profile Table -->
             <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
                 <thead>
                     <tr>
@@ -124,7 +124,7 @@ $result = $stmt->get_result();
             if(confirm("Are you sure you want to delete this?") == true) {
                 location.replace('news_delete.php?id=' + id)
             } else {
-                location.replace('dashboard.php')
+                location.replace('profile.php')
             }
         }
     </script>

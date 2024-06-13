@@ -19,7 +19,7 @@ if ($_SESSION['username'] !== $row['author']) {
 
 $sql = "DELETE FROM news WHERE id=$id";
 if ($conn->query($sql) === TRUE) {
-    header("Location: dashboard.php");
+    header("Location: profile.php");
 } else {
     echo "Error deleting news: " . $conn->error;
 }

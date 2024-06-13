@@ -31,14 +31,14 @@ $result = $conn->query($sql);
             </h1>
             <div class="flex items-center space-x-1 text-xs md:text-sm">
                 <?php if (isset($_SESSION['username'])) : ?>
-                    <a href="main/dashboard.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
+                    <a href="main/profile.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
                         <i class="fa-solid fa-clipboard-user"></i> ‎ Profile
                     </a>
                 <?php else : ?>
                     <a href="auth/login.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
                         <i class="fa-solid fa-user-check"></i> ‎ Login
                     </a>
-                    
+
                     <a href="auth/register.php" class="text-white bg-[#1DA1F2] border-none rounded px-2 md:px-4 py-2 m-1 md:m-2 transition-colors duration-300 hover:bg-[#0d8ae6]">
                         <i class="fa-solid fa-user-plus"></i> ‎ Register
                     </a>
